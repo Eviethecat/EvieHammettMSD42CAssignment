@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &414930143492474745
+--- !u!1 &4411490047840588282
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 314769537509652796}
-  - component: {fileID: 1274726866046333780}
-  - component: {fileID: -4898059770603051916}
+  - component: {fileID: 4411490047840588286}
+  - component: {fileID: 4411490047840588287}
+  - component: {fileID: 4411490047840588285}
+  - component: {fileID: 4411490047840588281}
+  - component: {fileID: 4411490047840588280}
+  - component: {fileID: 2074855092125445013}
   m_Layer: 0
   m_Name: EnemyBike
   m_TagString: Untagged
@@ -18,13 +21,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &314769537509652796
+--- !u!4 &4411490047840588286
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414930143492474745}
+  m_GameObject: {fileID: 4411490047840588282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.06, y: -1.23, z: 0}
   m_LocalScale: {x: 0.24699073, y: 0.24699073, z: 0.24699073}
@@ -32,13 +35,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1274726866046333780
+--- !u!212 &4411490047840588287
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414930143492474745}
+  m_GameObject: {fileID: 4411490047840588282}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-4898059770603051916
+--- !u!61 &4411490047840588285
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414930143492474745}
+  m_GameObject: {fileID: 4411490047840588282}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -109,3 +112,47 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!114 &4411490047840588281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411490047840588282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2982f0d839891f43928444de0aa6f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  waveConfig: {fileID: 11400000, guid: 25521b2077240e14e8bfc8d26c506550, type: 2}
+--- !u!114 &4411490047840588280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411490047840588282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901fc310143a74c42925c56535727407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
+--- !u!114 &2074855092125445013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411490047840588282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4403e5fa1d10b454990bacd442fb5f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotcounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 2
+  enemyBulletPrefab: {fileID: 8520170132006851795, guid: 4d9c033356649f043b82c02efb68eeea, type: 3}
+  enemyBulletSpeed: 0.3

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e51e051324a1d4c9d3866262884588, type: 3}
+  m_Name: Wave Car
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 4156666651996707930, guid: a673f1025864ac742bc3a56abdcbcd1a, type: 3}
+  pathPrefab: {fileID: 6146842109243563647, guid: b6b9abc21a009444f8fec1d29c32c072, type: 3}
+  timeBetweenSpawns: 3
+  spawnRandomFactor: 0.3
+  numberOfEnemies: 3
+  enemyMoveSpeed: 5
