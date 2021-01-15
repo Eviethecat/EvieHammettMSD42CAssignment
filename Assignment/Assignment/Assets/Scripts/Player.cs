@@ -7,6 +7,10 @@ public class Player : MonoBehaviour
     //Accessed by Unity
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1.5f;
+    [SerializeField] float health = 50f;
+
+    [SerializeField] AudioClip playerDeath;
+    [SerializeField] [Range(0, 1)] float playerDeathVolume = 0.5f;
 
     float xMin, xMax, yMin, yMax;
 
@@ -20,6 +24,39 @@ public class Player : MonoBehaviour
     void Update()
     {
         playerMove();
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        //access the DamageDealer class from otherObject which hits enemy and reduce health accordingly
+        Damage dmgDealer = otherObject.gameObject.GetComponent<Damage>();
+
+        if (!dmgDealer)
+        {
+            return;
+        }
+
+        ProcessHit(dmgDealer);
+    }
+
+    private void ProcessHit(Damage dmgDealer)
+    {
+        health -= dmgDealer.GetDamage();
+
+        dmgDealer.Hit();
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(playerDeath, Camera.main.transform.position, playerDeathVolume);
+        //Find the Level object and run its methond LoadGameOver()
+        FindObjectOfType<LevelScript>().LoadGameOver();
     }
 
     private void playerMove()

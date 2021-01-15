@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 4411490047840588281}
   - component: {fileID: 4411490047840588280}
   - component: {fileID: 2074855092125445013}
-  m_Layer: 0
+  - component: {fileID: 7419982421116504962}
+  m_Layer: 9
   m_Name: EnemyBike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,8 +152,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4403e5fa1d10b454990bacd442fb5f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7419982421116504962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411490047840588282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9393ba1a4e5d1ac4eb9e828d8e580a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   shotcounter: 0
   minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 2
+  maxTimeBetweenShots: 3
   enemyBulletPrefab: {fileID: 8520170132006851795, guid: 4d9c033356649f043b82c02efb68eeea, type: 3}
   enemyBulletSpeed: 0.3
