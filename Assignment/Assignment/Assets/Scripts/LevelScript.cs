@@ -7,7 +7,7 @@ public class LevelScript : MonoBehaviour
 {
     [SerializeField] float delay = 2f;
 
-    IEnumerator WaitAndLoad()
+    IEnumerator WaitAndLoadLose()
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("GameOver");
@@ -20,7 +20,18 @@ public class LevelScript : MonoBehaviour
 
     public void LoadGameOver()
     {
-        StartCoroutine(WaitAndLoad());
+        StartCoroutine(WaitAndLoadLose());
+    }
+
+    IEnumerator WaitAndLoadWin()
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("GameWon");
+    }
+
+    public void LoadGameWin()
+    {
+        StartCoroutine(WaitAndLoadWin());
     }
 
     public void LoadStartMenu()
