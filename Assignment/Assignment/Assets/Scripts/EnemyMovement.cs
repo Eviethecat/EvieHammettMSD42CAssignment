@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [SerializeField] int scoreValue = 5;
+
     [SerializeField] List<Transform> waypoints;
 
     [SerializeField] WaveConfig waveConfig;
@@ -49,6 +51,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<GameSession>().AddScore(scoreValue);
             Destroy(gameObject);
         }
     }
