@@ -246,6 +246,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1321835840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1905059519839783204, guid: 8c75316355985ad4c95215142eeb5c66, type: 3}
+  m_PrefabInstance: {fileID: 1905059520582065577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1321835845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321835840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901fc310143a74c42925c56535727407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+--- !u!50 &1321835846
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321835840}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &755148361532904992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -444,6 +483,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1905059519839783207, guid: 8c75316355985ad4c95215142eeb5c66, type: 3}
+      propertyPath: playerDamage
+      value: 
+      objectReference: {fileID: 8300000, guid: a928749b5883b9e498776b97111eb117, type: 3}
+    - target: {fileID: 1905059519839783207, guid: 8c75316355985ad4c95215142eeb5c66, type: 3}
+      propertyPath: explosionVFX
+      value: 
+      objectReference: {fileID: 5032494994082700206, guid: 5e6bdb0f4396604479c62f8c4370c315, type: 3}
     - target: {fileID: 1905059519839783224, guid: 8c75316355985ad4c95215142eeb5c66, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.77
@@ -972,6 +1019,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 838129873242937411, guid: 5bd2e2af1e6437a408a63fea75d81aa2, type: 3}
+      propertyPath: m_Volume
+      value: 0.073
+      objectReference: {fileID: 0}
     - target: {fileID: 2016728081943047846, guid: 5bd2e2af1e6437a408a63fea75d81aa2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.18596542

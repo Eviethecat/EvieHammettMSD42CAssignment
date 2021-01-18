@@ -12,6 +12,12 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip playerDeath;
     [SerializeField] [Range(0, 1)] float playerDeathVolume = 0.5f;
 
+    [SerializeField] AudioClip playerDamage;
+    [SerializeField] [Range(0, 1)] float playerDamageVolume = 0.5f;
+
+    [SerializeField] GameObject explosionVFX;
+    [SerializeField] float explosionVolume;
+
     float xMin, xMax, yMin, yMax;
 
     // Start is called before the first frame update
@@ -45,6 +51,11 @@ public class Player : MonoBehaviour
 
         dmgDealer.Hit();
 
+        AudioSource.PlayClipAtPoint(playerDamage, Camera.main.transform.position, playerDamageVolume);
+
+        GameObject explosion = Instantiate(explosionVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, 1f);
+
         if (health <= 0)
         {
             Die();
@@ -55,6 +66,7 @@ public class Player : MonoBehaviour
     {
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(playerDeath, Camera.main.transform.position, playerDeathVolume);
+
         //Find the Level object and run its methond LoadGameOver()
         FindObjectOfType<LevelScript>().LoadGameOver();
     }

@@ -127,3 +127,7 @@ MonoBehaviour:
   health: 50
   playerDeath: {fileID: 8300000, guid: 01a28d33650c74c4f9f7fce08f56270e, type: 3}
   playerDeathVolume: 0.5
+  playerDamage: {fileID: 0}
+  playerDamageVolume: 0.5
+  explosionVFX: {fileID: 0}
+  explosionVolume: 0
