@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 {
     Text scoreText;
     GameSession gameSession;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,10 @@ public class Score : MonoBehaviour
     void Update()
     {
         scoreText.text = gameSession.getScore().ToString();
+
+        if (gameSession.getScore() >= 100)
+        {
+            FindObjectOfType<LevelScript>().LoadGameWin();
+        }
     }
 }

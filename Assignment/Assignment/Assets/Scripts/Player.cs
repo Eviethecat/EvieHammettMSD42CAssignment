@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject explosionVFX;
     [SerializeField] float explosionVolume;
 
+    GameSession scoreText;
+
     float xMin, xMax, yMin, yMax;
 
     // Start is called before the first frame update
@@ -89,5 +91,10 @@ public class Player : MonoBehaviour
 
         yMin = gameCam.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
         yMax= gameCam.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
+    }
+
+    public float getHealth()
+    {
+        return health;
     }
 }
