@@ -137,9 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2982f0d839891f43928444de0aa6f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 5
   waypoints: []
   waveConfig: {fileID: 11400000, guid: 9efa2bf8c5a250e4990e638338efdef1, type: 2}
-  health: 1
 --- !u!114 &9086152235084715880
 MonoBehaviour:
   m_ObjectHideFlags: 0
